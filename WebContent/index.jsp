@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -92,8 +94,13 @@
 </head>
 <body>
 <jsp:include page="navbar.jsp"></jsp:include>
-<div id="Welcome banner">
-<h1>Welcome to your personal weather tracker and flight planner</h1>
+<div class="container" id="Welcome banner" style="width:100%;height:100px;background-color:lightblue">
+<h1 style="font-color:black;">Welcome to your personal weather tracker and flight planner</h1>
+<form id="destinations">
+<input type="text" name="startlocation" id="startlocation" value="" placeholder="Starting Location"/>
+<input type="text" name="destination" id="destination" value="" placeholder="destination"/>
+<input type="submit" id="submit" value="submit" name="submit" />
+</form>
 </div>
     <input id="pac-input" class="controls" type="text" placeholder="Search Box">
     <div id="map"></div>
@@ -176,5 +183,7 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYL5A6ZTQ3PxBGIJVFhyMvF3KunkTY0-Q&libraries=places&callback=initAutocomplete"
          async defer></script>
+<div class="container" id="assistant" style="width:100%;height:500px;background-color:lightblue">
+</div>
 </body>
 </html>
