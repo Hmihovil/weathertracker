@@ -13,7 +13,8 @@
     <meta name="author" content="">
 
     <title>Weather Tracker</title>
-
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -116,9 +117,9 @@
 
    
     <div id="map"></div>
-     <div id="floating-panel" style="width:100%S" align="justify">
+     <div id="floating-panel" style="width:100%S" align="center">
       <input id="address" type="text" style="color:black"  value="Sydney, NSW">
-      <input id="submit" type="button" value="Geocode">
+      <input id="localein" type="button" value="Geocode">
     </div>
         <script>
       function initMap() {
@@ -128,7 +129,7 @@
         });
         var geocoder = new google.maps.Geocoder();
 
-        document.getElementById('submit').addEventListener('click', function() {
+        document.getElementById('localein').addEventListener('click', function() {
           geocodeAddress(geocoder, map);
         });
       }

@@ -33,13 +33,16 @@
     </style>
 </head>
 <body>
-
-    <div id="floating-panel">
-      <input id="address" type="textbox" value="Sydney, NSW">
+<!--   <form onsubmit="init map" action="PlanFlight" method="post"> -->
+<!--     <input type="text" value="" id="site1" name="site1"/> -->
+<!--   	<input type="text" value="" id="site2" name="site2"/> -->
+<!--   	<input type="submit" value="submit" id="submit" name="submit"/> -->
+<!--     </form> -->
+     <div id="floating-panel">
+      <input id="address" type="text" value="Sydney, NSW">
       <input id="submit" type="button" value="Geocode">
     </div>
     <div id="map"></div>
-  
     <script>
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
