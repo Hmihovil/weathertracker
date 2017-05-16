@@ -37,33 +37,34 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <style>
-      /* Always set the map height explicitly to define the size of the div
+<style>
+/* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #floating-panel {
-        position: relative;
-        top: 10px;
-        left: 0%;
-        z-index: 5;
-        background-color: #fff;
-        padding: 5px;
-        border: 1px solid #999;
-        text-align: center;
-        color:black;
-        font-family: 'Roboto','sans-serif';
-        line-height: 30px;
-        padding-left: 10px;
-      }
-    </style>
+#map {
+	height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#floating-panel {
+	position: relative;
+	top: 10px;
+	left: 0%;
+	z-index: 5;
+	background-color: #fff;
+	padding: 5px;
+	border: 1px solid #999;
+	text-align: center;
+	color: black;
+	font-family: 'Roboto', 'sans-serif';
+	line-height: 30px;
+	padding-left: 10px;
+}
+</style>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -106,8 +107,9 @@
 				<div class="col-md-8 col-md-offset-2">
 					<h1 class="brand-heading">Flight Planner</h1>
 					<p class="intro-text">
-						A Free Web App that helps user plan a trip by flight <br>Created
-						by BBJ Weather Inc
+						A Free Web App that uses data to help users plan a flight <br>This
+						app uses machine learning to predict delays <br>Created by
+						BBJ Weather Inc
 					</p>
 					<a href="#plan" class="btn btn-circle page-scroll"> <i
 						class="fa fa-angle-double-down animated"></i>
@@ -123,32 +125,35 @@
 		<div class="col-lg-8 col-lg-offset-2">
 			<h2>Plan a flight</h2>
 			<p>Please Enter Flight data</p>
-			<form >
+			<form>
 				<fieldset>
 					<input type="text" name="airport1" value="Start Point"
 						id="airport1" style="color: black" /> <input type="text"
 						name="airport2" value="End Point" id="airport2"
 						style="color: black" />
 				</fieldset>
+				<fieldset>
+					<input type="text" name="date1" id="date1" value="Trip Start Date"
+						style="color: black" />
+					<!-- 				<input type="text" name="date2" id="date2" value="Trip End Date" style="color:black"/> -->
+				</fieldset>
 				<input type="submit" value="submit" id="submit" style="color: black" />
 			</form>
 		</div>
 	</div>
 	</section>
-<!-- 	<div id="floating-panel"> -->
-<!--     <b>Start: </b> -->
-<!--     <input type="text" id="start" value="bwi"/> -->
-<!--     <b>End: </b> -->
-<!--   <input type="text" id="end"/> -->
-<!--     </div> -->
-	
+	<!-- 	<div id="floating-panel"> -->
+	<!--     <b>Start: </b> -->
+	<!--     <input type="text" id="start" value="bwi"/> -->
+	<!--     <b>End: </b> -->
+	<!--   <input type="text" id="end"/> -->
+	<!--     </div> -->
+
 	<div id="map"></div>
-	  <div id="floating-panel">
-    <b>Start: </b>
-    <input type="text" id="start" value="bwi"/>
-    <b>End: </b>
-  <input type="text" id="end"/>
-    </div>
+	<div id="floating-panel">
+		<b>Start: </b> <input type="text" id="start" value="bwi" /> <b>End:
+		</b> <input type="text" id="end" />
+	</div>
 	<script>
       function initMap() {
         var directionsService = new google.maps.DirectionsService;
@@ -187,11 +192,12 @@
 		<div class="container">
 			<div class="col-lg-8 col-lg-offset-2">
 				<h2>Flight Advisory</h2>
-				<p>Your Flight date is</p>
-				<p>Your trip time should be</p>
-				<p>Delay</p>
-				<p>Current Weather and predictions</p>
-				<p>What to wear</p>
+				<!-- This will eventually provide a live updated feed of weather predictions and predicted flight delay -->
+				<p>Your Flight date is : 06/17/12</p>
+				<p>Your flight time should be: 12 hrs</p>
+				<p>Delay: No delays predicted</p>
+				<p>Current Weather and predictions: Past weather has been clear
+					for this date and location</p>
 
 			</div>
 		</div>
@@ -207,14 +213,11 @@
 				<a href="#">feedback@flightplanner.com</a>
 			</p>
 			<ul class="list-inline banner-social-buttons">
-				<li><a href="#"
-					class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i>
-						<span class="network-name">Twitter</span></a></li>
-				<li><a href="#"
-					class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i>
-						<span class="network-name">Github</span></a></li>
-				<li><a href="#"
-					class="btn btn-default btn-lg"><i
+				<li><a href="#" class="btn btn-default btn-lg"><i
+						class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a></li>
+				<li><a href="#" class="btn btn-default btn-lg"><i
+						class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a></li>
+				<li><a href="#" class="btn btn-default btn-lg"><i
 						class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
 				</li>
 			</ul>
